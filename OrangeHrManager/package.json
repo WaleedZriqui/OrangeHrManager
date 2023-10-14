@@ -1,0 +1,31 @@
+{
+  "name": "automation_ts",
+  "version": "1.0.0",
+  "description": "training QA automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "GSG": "npx cypress run --spec cypress/e2e/specs/ --env allure=true",
+    "allure_report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "mycypress": "rm -rf allure-report; npx cypress run  --spec cypress/e2e/specs/*.spec* --env allure=true  --reporter mocha-allure-reporter"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.1.0",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "@types/node": "^20.8.6",
+    "cypress": "^13.3.1",
+    "cypress-tags": "^1.1.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@yaireo/tagify": "^4.17.9",
+    "allure-commandline": "^2.24.0",
+    "cypress-plugin-api": "^2.11.1",
+    "mocha-allure-reporter": "^1.4.0"
+  }
+}

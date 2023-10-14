@@ -1,0 +1,6 @@
+{
+    "valid_username":"admin",
+    "invalid_username": "12ya_",
+    "valid_pwd":"admin123",
+    "invalid_pwd": "" 
+}
